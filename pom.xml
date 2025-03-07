@@ -46,6 +46,16 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <targetPath>${project.build.outputDirectory}</targetPath>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <!-- Maven Compiler Plugin -->
             <plugin>
@@ -101,12 +111,10 @@
                 <configuration>
                     <container>
                         <containerId>tomcat10x</containerId>
-                        <type>installed</type>
-                        <home>/opt/tomcat</home>
+                        <type>remote</type>
                     </container>
                     <configuration>
-                        <type>existing</type>
-                        <home>/opt/tomcat</home>
+                        <type>runtime</type>
                         <properties>
                             <cargo.tomcat.manager.url>http://localhost:8080/manager/text</cargo.tomcat.manager.url>
                             <cargo.remote.username>admin</cargo.remote.username>

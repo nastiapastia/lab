@@ -3,6 +3,9 @@
 
 mvn clean verify
 
+перезалити проект
+
+mvn clean package cargo:undeploy cargo:deploy
 
 Створення WAR-файлу
 mvn clean package
