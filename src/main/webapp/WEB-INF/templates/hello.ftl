@@ -16,5 +16,12 @@
 <body>
 <h1>${message} test</h1>
 <h2>test 2</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="${contextPath}/assets/images/apelsin-siciliya-imp-500x500.png" alt="apelsin">
+        </div>
+    </div>
+</div>
 </body>
 </html>
