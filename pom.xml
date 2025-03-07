@@ -28,7 +28,19 @@
             <artifactId>hibernate-core</artifactId>
             <version>6.1.7.Final</version>
         </dependency>
+        <!-- Jakarta Persistence API -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
 
+        <!-- JBoss Logging (потрібен для Hibernate 6.x) -->
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>3.5.3.Final</version>
+        </dependency>
 
         <!-- MySQL Connector -->
         <dependency>
@@ -52,6 +64,12 @@
                 <targetPath>${project.build.outputDirectory}</targetPath>
                 <includes>
                     <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>hibernate.cfg.xml</include>
                 </includes>
             </resource>
         </resources>

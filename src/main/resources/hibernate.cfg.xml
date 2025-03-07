@@ -5,12 +5,23 @@
 
 <hibernate-configuration>
     <session-factory>
+        <!-- Підключення до MySQL -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/myapp?serverTimezone=UTC</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/webshop?useSSL=false&amp;serverTimezone=UTC</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">1122</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Діалект для MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Налаштування логування SQL -->
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Вказати, які моделі використовувати -->
+        <mapping class="uaedunung.se.entity.User"/>
+        <mapping class="uaedunung.se.entity.Fruit"/>
+        <mapping class="uaedunung.se.entity.Country"/>
+        <mapping class="uaedunung.se.entity.Street"/>
     </session-factory>
 </hibernate-configuration>
