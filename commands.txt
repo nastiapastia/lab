@@ -7,6 +7,8 @@ mvn clean verify
 
 mvn clean package cargo:undeploy cargo:deploy
 
+mvn clean package cargo:redeploy
+
 Створення WAR-файлу
 mvn clean package
 
