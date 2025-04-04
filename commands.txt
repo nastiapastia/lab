@@ -9,6 +9,9 @@ mvn clean package cargo:undeploy cargo:deploy
 
 mvn clean package cargo:redeploy
 
+логи шукай тут:
+tail -f /opt/tomcat/logs/catalina.out
+
 Створення WAR-файлу
 mvn clean package
 
