@@ -28,7 +28,7 @@ public class User {
     private String phone;
 
     public enum Role {
-        CLIENT, EMPLOYEE, SUPPLIER, ADMIN
+        client, employee, supplier, admin
     }
 
     public int getId() {
