@@ -20,17 +20,26 @@ import uaedunung.se.config.HibernateUtil;
 import uaedunung.se.entity.Fruit;
 import uaedunung.se.entity.User;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @WebServlet("/products")
 public class ProductServlet extends HttpServlet {
+
+    private static final Logger logger = LoggerFactory.getLogger(ProductServlet.class);
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
         User user = (User) req.getSession().getAttribute("user");
         if (user == null) {
+            logger.warn("Спроба доступу до /products без авторизації");
             resp.sendRedirect(req.getContextPath() + "/");
             return;
         }
+
+        logger.info("Користувач {} заходить на /products", user.getEmail());
 
         //resp.getWriter().write("user: " + user);
 
