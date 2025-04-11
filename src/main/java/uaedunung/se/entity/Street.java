@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "streets")
-public class Street {
+public final class Street {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
