@@ -14,7 +14,7 @@ public final class Fruit {
     @Column(nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "refrigeration_required")
     private boolean refrigerationRequired = false;
 
     @Column(columnDefinition = "TEXT", name = "image_url")
