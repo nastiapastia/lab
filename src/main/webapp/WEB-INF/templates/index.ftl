@@ -42,6 +42,10 @@
                         <#if error??>
                             <div class="alert alert-danger mt-3">${error}</div>
                         </#if>
+
+                        <div class="mt-3 text-center">
+                            <a href="${contextPath}/forgot-password">Забули пароль?</a>
+                        </div>
                     </form>
 
                 </div>

@@ -2,11 +2,14 @@ package uaedunung.se.servlets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.*;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import uaedunung.se.config.HibernateUtil;
 import uaedunung.se.entity.User;
+
 import java.io.IOException;
 
 @WebServlet("/login")
